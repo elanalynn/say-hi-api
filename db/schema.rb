@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190802155131) do
+ActiveRecord::Schema.define(version: 20190802203036) do
 
   create_table "answer_multi_choices", force: :cascade do |t|
     t.integer "question_id"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20190802155131) do
   create_table "answer_true_falses", force: :cascade do |t|
     t.integer "question_id"
     t.boolean "answer_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "connections", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
+    t.integer "answered_questions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
