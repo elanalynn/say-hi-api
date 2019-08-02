@@ -1,0 +1,2 @@
+class AnswersTrueFalseController < ApplicationController
+end
