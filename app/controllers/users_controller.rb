@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include Secured
+
   def index
     @users = User.all
     json_response(@users)
